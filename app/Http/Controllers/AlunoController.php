@@ -13,7 +13,10 @@ class AlunoController extends Controller
         $all_alunos = DB::table('aluno')->select()->get();
         return $all_alunos;
     }
-
+    public function show($parameter){
+        $aluno = DB::table('aluno')->select()->where('id','=',$parameter)->get();
+        return $aluno;
+    }
     public function store(Request $request){
         try {
             $query = DB::table('aluno')->insert([
