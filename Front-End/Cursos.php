@@ -1,8 +1,16 @@
 <?php
-    // $url_aluno = file_get_contents('http://localhost:8000/api/aluno');
-    // $url_curso = file_get_contents('http://localhost:8000/api/curso');
-    // $alunos = json_decode($url_aluno);
-    // $cursos = json_decode($url_curso);
+    $url_aluno = file_get_contents('http://localhost:8000/api/aluno');
+    $url_curso = file_get_contents('http://localhost:8000/api/curso');
+    $alunos = json_decode($url_aluno);
+    $cursos = json_decode($url_curso);
+
+
+    // session_start();
+    // if((!isset ($_SESSION['cod_user']) == true)){
+    //   unset($_SESSION['login']);
+    //   unset($_SESSION['senha']);
+    //   header('location:index.php');
+    // }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -49,21 +57,21 @@
     </div>
     <div class="container my-2">
         <h2 class="titulocrud">Cadastro Curso</h2>
-        <form>
+        <form action="cURL/POST_Cursos.php" method="POST">
           <div class="form-row">
             <div class="form-group formcrud col-md-12">
               <label for="inputEmail4">Nome</label>
-              <input type="email" class="form-control" id="inputEmail4">
+              <input type="text" name="nome_curso" class="form-control" id="inputEmail4">
             </div>
           </div>
           <div class="form-row">
               <div class="form-group formcrud col-sm-6">
                 <label for="inputAddress2">Data Cadastro</label>
-                <input type="date" class="form-control" id="inputAddress2">
+                <input type="date" name="data_cadastro" class="form-control" id="inputAddress2">
               </div>
               <div class="form-group formcrud col-sm-6">
                 <label for="inputAddress">Carga Horária</label>
-                <input type="text" class="form-control" id="inputAddress">
+                <input type="text" name="carga_horaria" class="form-control" id="inputAddress">
               </div>
           </div>
           <button type="submit" class="btn text-light col-sm-3">Adicionar</button>
@@ -73,7 +81,7 @@
         <table class="table table-sm">
       <thead class="tablehead">
         <tr>
-          <th scope="col">Nome</th>
+          <th scope="col">Curso</th>
           <th scope="col">Data Cadastro</th>
           <th scope="col">Carga Horária</th>
           <th scope="col"></th>
@@ -82,18 +90,18 @@
       </thead>
       <tbody>
         <?php 
-            // foreach ($alunos as $aluno) {
-            //     echo "
-            //         <tr>
-            //           <td>".$aluno->nome_aluno."</td>
-            //           <td>".$aluno->CPF."</td>
-            //           <td>".$aluno->email."</td>
-            //           <td><a href=''><i class='fas fa-user-edit'></i></a></td>
-            //           <td><a href=''><i class='fas fa-trash-alt'></i></a></td>
-            //         </tr>
+            foreach ($cursos as $curso) {
+                echo "
+                    <tr>
+                      <td>".$curso->nome_curso."</td>
+                      <td>".$curso->data_cadastro."</td>
+                      <td>".$curso->carga_horaria."</td>
+                      <td><a href=''><i class='fas fa-user-edit'></i></a></td>
+                      <td><a href=''><i class='fas fa-trash-alt'></i></a></td>
+                    </tr>
 
-            //     ";
-            // }
+                ";
+            }
         ?>        
       </tbody>
     </table>

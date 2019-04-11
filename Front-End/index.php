@@ -20,14 +20,14 @@
     				<img src="images/perfil.png">
     				<h2 class="font-weight-bold text-light my-2">Desenvolvedor Ceuma</h2>
     			</div>
-    			<form class="col-12">
+    			<form action="cURL/POST_Login.php" method="POST" class="col-12">
     				 <div class="form-group">
     				 	<label for="exampleInputEmail1" class=""><i  class="fas fa-user"></i> Username</label>
-    				 	<input type="text" name="" class="form-control" >    				 	
+    				 	<input type="text" name="usuario" class="form-control" >    				 	
     				 </div>
     				 <div class="form-group">
     				 	<label for="exampleInputEmail1" class=""><i class="fas fa-lock"></i> Password</label>
-    				 	<input type="password" name="" class="form-control">    				 	
+    				 	<input type="password" name="senha" class="form-control">    				 	
     				 </div>
     				<button type="submit" class="btn"><i class="fas fa-sign-in-alt"> Login</i></button>
     				<div class="col-12 forgot">

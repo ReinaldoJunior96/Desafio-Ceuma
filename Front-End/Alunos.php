@@ -1,8 +1,8 @@
 <?php
-    // $url_aluno = file_get_contents('http://localhost:8000/api/aluno');
-    // $url_curso = file_get_contents('http://localhost:8000/api/curso');
-    // $alunos = json_decode($url_aluno);
-    // $cursos = json_decode($url_curso);
+    $url_aluno = file_get_contents('http://localhost:8000/api/aluno');
+    $url_curso = file_get_contents('http://localhost:8000/api/curso');
+    $alunos = json_decode($url_aluno);
+    $cursos = json_decode($url_curso);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -49,43 +49,58 @@
     </div>
     <div class="container my-2">
         <h2 class="titulocrud">Cadastro Alunos</h2>
-        <form>
+        <form action="cURL/POST_Alunos.php" method="POST">
           <div class="form-row">
             <div class="form-group formcrud col-md-8">
-              <label for="inputEmail4">Email</label>
-              <input type="email" class="form-control" id="inputEmail4">
+              <label for="inputEmail4">Nome Completo</label>
+              <input type="text" name="nome_aluno" class="form-control" id="inputEmail4">
             </div>
             <div class="form-group formcrud col-md-4">
               <label for="inputPassword4">CPF</label>
-              <input maxlength="11" type="text" class="form-control" id="inputPassword4" >
+              <input maxlength="11" type="text" name="CPF" class="form-control" id="inputPassword4" >
               <small id="passwordHelpBlock" class="form-text text-muted">
                 Apenas números.
-</small>
+              </small>
             </div>
+            
           </div>
           <div class="form-row">
-              <div class="form-group formcrud col-sm-4">
-                <label for="inputAddress2">CEP</label>
-                <input type="text" class="form-control" id="inputAddress2">
-              </div>
-              <div class="form-group formcrud col-sm-8">
+            <div class="form-group formcrud col-sm-12">
                 <label for="inputAddress">Endereço</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="Av Jerônimo de Albuquerque, nº 0">
+                <input type="text" name="endereco" class="form-control" id="inputAddress" placeholder="Av Jerônimo de Albuquerque, nº 0">
+              </div>
+          </div>
+          <div class="form-row">
+              <div class="form-group formcrud col-sm-8">
+                <label for="inputAddress2">CEP</label>
+                <input type="text" name="CEP" class="form-control" id="inputAddress2">
+              </div>
+              <div class="form-group formcrud col-sm-4">
+                <label for="inputAddress2">Curso</label>
+                <select class="custom-select" name="curso_id">
+                <option selected>Selecione o curso</option>
+                <?php 
+                  foreach ($cursos as $curso) {
+                    echo "<option value=".$curso->id.">".$curso->nome_curso."</option>";
+                  }
+                ?>
+              </select>
               </div>
           </div>
 
           <div class="form-row">
             <div class="form-group formcrud col-md-6">
               <label for="inputCity">E-mail</label>
-              <input type="email" class="form-control" id="inputCity">
+              <input type="email" name="email" class="form-control" id="inputCity">
             </div>
             <div class="form-group formcrud col-md-6">
               <label for="inputCity">Telefone</label>
-              <input type="text" class="form-control" id="inputCity" placeholder="(00)984758486">
+              <input type="text" name="telefone" class="form-control" id="inputCity" placeholder="(00)984758486">
             </div>
           </div>
+
           <button type="submit" class="btn text-light col-sm-3">Adicionar</button>
-</form>
+        </form>
     </div>
     <div class="container my-3">
         <table class="table table-sm">
@@ -100,18 +115,18 @@
       </thead>
       <tbody>
         <?php 
-            // foreach ($alunos as $aluno) {
-            //     echo "
-            //         <tr>
-            //           <td>".$aluno->nome_aluno."</td>
-            //           <td>".$aluno->CPF."</td>
-            //           <td>".$aluno->email."</td>
-            //           <td><a href=''><i class='fas fa-user-edit'></i></a></td>
-            //           <td><a href=''><i class='fas fa-trash-alt'></i></a></td>
-            //         </tr>
+            foreach ($alunos as $aluno) {
+                echo "
+                    <tr>
+                      <td>".$aluno->nome_aluno."</td>
+                      <td>".$aluno->CPF."</td>
+                      <td>".$aluno->email."</td>
+                      <td><a href=''><i class='fas fa-user-edit'></i></a></td>
+                      <td><a href=''><i class='fas fa-trash-alt'></i></a></td>
+                    </tr>
 
-            //     ";
-            // }
+                ";
+            }
         ?>        
       </tbody>
     </table>
