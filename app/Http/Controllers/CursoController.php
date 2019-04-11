@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\QueryException;
 use App\Curso;
 
 class CursoController extends Controller
@@ -11,6 +12,10 @@ class CursoController extends Controller
     public function index(){
         $all_cursos = DB::table('curso')->select()->get();
         return $all_cursos;
+    }
+    public function show($parameter){
+        $curso = DB::table('curso')->select()->where('id','=',$parameter)->get();
+        return $curso;
     }
 
     public function store(Request $request){

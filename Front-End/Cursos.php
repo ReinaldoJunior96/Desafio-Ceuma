@@ -57,7 +57,7 @@
     </div>
     <div class="container my-2">
         <h2 class="titulocrud">Cadastro Curso</h2>
-        <form action="cURL/POST_Cursos.php" method="POST">
+        <form action="cURL/cURLCurso/POST_Cursos.php" method="POST">
           <div class="form-row">
             <div class="form-group formcrud col-md-12">
               <label for="inputEmail4">Nome</label>
@@ -96,10 +96,9 @@
                       <td>".$curso->nome_curso."</td>
                       <td>".$curso->data_cadastro."</td>
                       <td>".$curso->carga_horaria."</td>
-                      <td><a href=''><i class='fas fa-user-edit'></i></a></td>
-                      <td><a href=''><i class='fas fa-trash-alt'></i></a></td>
+                      <td><a href='Edit_Curso.php?id=".$curso->id."'><i class='fas fa-user-edit'></i></a></td>
+                      <td><a href='cURL/DELETE_Curso.php?id=".$curso->id."'><i class='fas fa-trash-alt'></i></a></td>
                     </tr>
-
                 ";
             }
         ?>        

@@ -49,7 +49,7 @@
     </div>
     <div class="container my-2">
         <h2 class="titulocrud">Cadastro Alunos</h2>
-        <form action="cURL/POST_Alunos.php" method="POST">
+        <form action="cURL/cURLAluno/POST_Alunos.php" method="POST">
           <div class="form-row">
             <div class="form-group formcrud col-md-8">
               <label for="inputEmail4">Nome Completo</label>
@@ -121,8 +121,8 @@
                       <td>".$aluno->nome_aluno."</td>
                       <td>".$aluno->CPF."</td>
                       <td>".$aluno->email."</td>
-                      <td><a href=''><i class='fas fa-user-edit'></i></a></td>
-                      <td><a href=''><i class='fas fa-trash-alt'></i></a></td>
+                      <td><a href='cURL/cURLAluno/PUT_Aluno.php?id=".$aluno->id."'><i class='fas fa-user-edit'></i></a></td>
+                      <td><a href='cURL/cURLAluno/DELETE_Aluno.php?id=".$aluno->id."'><i class='fas fa-trash-alt'></i></a></td>
                     </tr>
 
                 ";
