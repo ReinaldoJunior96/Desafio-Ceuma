@@ -1,8 +1,3 @@
-<?php
-$url = file_get_contents('http://localhost:8000/api/aluno');
-$alunos = json_decode($url);
-
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -25,7 +20,6 @@ $alunos = json_decode($url);
     				<img src="images/perfil.png">
     				<h2 class="font-weight-bold text-light my-2">Desenvolvedor Ceuma</h2>
     			</div>
-
     			<form class="col-12">
     				 <div class="form-group">
     				 	<label for="exampleInputEmail1" class=""><i  class="fas fa-user"></i> Username</label>
@@ -37,7 +31,7 @@ $alunos = json_decode($url);
     				 </div>
     				<button type="submit" class="btn"><i class="fas fa-sign-in-alt"> Login</i></button>
     				<div class="col-12 forgot">
-    					<a href="#">Criar nova conta</a><br>
+    					<a href="Alunos.php">Criar nova conta</a><br>
     					<a href="#">Esqueceu sua senha?</a>
     				</div>
     			</form>

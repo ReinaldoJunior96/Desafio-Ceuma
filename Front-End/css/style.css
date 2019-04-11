@@ -2,7 +2,8 @@
 
 body{
 	font-family: 'Roboto', sans-serif;
-	background-image: linear-gradient(to right, #5f2c82 , #49a09d);
+	background-image: url();
+	/*background-image: linear-gradient(to right, #5f2c82 , #49a09d);*/
 	background-size: cover;
 }
 .main-section{ 
@@ -21,8 +22,8 @@ body{
 	margin-bottom: 35px;
 }
 .user-img img{
-	height: 130px;
-	width: 150px;
+	height: 100px;
+	width: 130px;
 	border-radius: 5px;
 	box-shadow: 0px 0px 2px #848484; 
 }
@@ -62,4 +63,17 @@ button{
 .forgot a{
 	color: #c2fbfe;
 
+}
+
+.tablehead{
+	background-color: #3b4652;
+	color: #fff;
+}
+.navbar{
+	background-color: #3b4652;
+	color: #fff;
+}
+
+.coroption{
+	color: red;
 }
