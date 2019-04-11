@@ -31,7 +31,7 @@
     				 </div>
     				<button type="submit" class="btn"><i class="fas fa-sign-in-alt"> Login</i></button>
     				<div class="col-12 forgot">
-    					<a href="Alunos.php">Criar nova conta</a><br>
+    					<a href="Cursos.php">Criar nova conta</a><br>
     					<a href="#">Esqueceu sua senha?</a>
     				</div>
     			</form>

@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-   <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand" >
         <img src="images/perfil.png" width="30" height="30" class="d-inline-block align-top img-icon" alt="">
         Desafio Ceuma
@@ -48,52 +48,34 @@
         </div>
     </div>
     <div class="container my-2">
-        <h2 class="titulocrud">Cadastro Alunos</h2>
+        <h2 class="titulocrud">Cadastro Curso</h2>
         <form>
           <div class="form-row">
-            <div class="form-group formcrud col-md-8">
-              <label for="inputEmail4">Email</label>
+            <div class="form-group formcrud col-md-12">
+              <label for="inputEmail4">Nome</label>
               <input type="email" class="form-control" id="inputEmail4">
             </div>
-            <div class="form-group formcrud col-md-4">
-              <label for="inputPassword4">CPF</label>
-              <input maxlength="11" type="text" class="form-control" id="inputPassword4" >
-              <small id="passwordHelpBlock" class="form-text text-muted">
-                Apenas números.
-</small>
-            </div>
           </div>
           <div class="form-row">
-              <div class="form-group formcrud col-sm-4">
-                <label for="inputAddress2">CEP</label>
-                <input type="text" class="form-control" id="inputAddress2">
+              <div class="form-group formcrud col-sm-6">
+                <label for="inputAddress2">Data Cadastro</label>
+                <input type="date" class="form-control" id="inputAddress2">
               </div>
-              <div class="form-group formcrud col-sm-8">
-                <label for="inputAddress">Endereço</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="Av Jerônimo de Albuquerque, nº 0">
+              <div class="form-group formcrud col-sm-6">
+                <label for="inputAddress">Carga Horária</label>
+                <input type="text" class="form-control" id="inputAddress">
               </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group formcrud col-md-6">
-              <label for="inputCity">E-mail</label>
-              <input type="email" class="form-control" id="inputCity">
-            </div>
-            <div class="form-group formcrud col-md-6">
-              <label for="inputCity">Telefone</label>
-              <input type="text" class="form-control" id="inputCity" placeholder="(00)984758486">
-            </div>
           </div>
           <button type="submit" class="btn text-light col-sm-3">Adicionar</button>
-</form>
+        </form>
     </div>
     <div class="container my-3">
         <table class="table table-sm">
       <thead class="tablehead">
         <tr>
           <th scope="col">Nome</th>
-          <th scope="col">CPF</th>
-          <th scope="col">E-mail</th>
+          <th scope="col">Data Cadastro</th>
+          <th scope="col">Carga Horária</th>
           <th scope="col"></th>
           <th scope="col"></th>
         </tr>

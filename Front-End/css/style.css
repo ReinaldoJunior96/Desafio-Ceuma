@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 body{
-	font-family: 'Roboto', sans-serif;
+	
 	background-image: url();
 	/*background-image: linear-gradient(to right, #5f2c82 , #49a09d);*/
 	background-size: cover;
@@ -37,8 +37,17 @@ body{
 	border: 0;
 	font-size: 18px;
 }
+.form-group.formcrud input{
+	/*background-color: red;*/
+	border-radius: 5px;
+	box-shadow: 0px 0px 3px #848484; 
+}
+.form-group.formcrud label{
+	color: black;
+}
 label{
 	color: #fff;
+	font-family: 'Roboto Slab', serif;
 }
 button{
 	width: 100%;
@@ -74,6 +83,13 @@ button{
 	color: #fff;
 }
 
-.coroption{
-	color: red;
+.titulocrud{
+	font-family: 'Roboto Slab', serif;
+	color: #3b4652;
+}
+.img-icon{
+	border-radius: 5px;
+}
+.logout{
+	font-size: 20px;
 }
