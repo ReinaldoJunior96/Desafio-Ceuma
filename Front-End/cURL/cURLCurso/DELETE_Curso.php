@@ -3,7 +3,7 @@
 $url       = 'http://localhost:8000/api/curso/'.$_GET['id'];
 $cabecalho = array('Content-Type: application/json', 'Accept: application/json');
 $campos    = json_encode(array(
-				'id' => $_GET['id']
+				'id' => '12'
 			));
 
 $ch = curl_init();
@@ -19,7 +19,7 @@ curl_setopt($ch, CURLOPT_CUSTOMREQUEST,  'DELETE');
 $resposta = curl_exec($ch);
 
 curl_close($ch);
-header("location: ../Cursos.php");
+header("location: ../../Cursos.php");
 
 
 

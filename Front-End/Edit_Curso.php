@@ -59,7 +59,7 @@ foreach ($cursos as $curso){
 ?>
 <div class="container my-2">
     <h2 class="titulocrud">Editar Curso</h2>
-    <form action="cURL/PUT_Cursos.php" method="POST">
+    <form action="cURL/cURLCurso/PUT_Curso.php" method="POST">
         <input type="hidden" name="id" value="<?php echo $curso->id ?>">
         <div class="form-row">
             <div class="form-group formcrud col-md-12">

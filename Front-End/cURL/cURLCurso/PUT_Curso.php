@@ -21,7 +21,7 @@ curl_setopt($ch, CURLOPT_CUSTOMREQUEST,  'PUT');
 $resposta = curl_exec($ch);
 
 curl_close($ch);
-header("location: ../Cursos.php");
+header("location: ../../Cursos.php");
 
 
 

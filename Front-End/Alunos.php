@@ -49,7 +49,7 @@
     </div>
     <div class="container my-2">
         <h2 class="titulocrud">Cadastro Alunos</h2>
-        <form action="cURL/cURLAluno/POST_Alunos.php" method="POST">
+        <form action="cURL/cURLAluno/POST_Aluno.php" method="POST">
           <div class="form-row">
             <div class="form-group formcrud col-md-8">
               <label for="inputEmail4">Nome Completo</label>
