@@ -18,6 +18,7 @@ class AlunoController extends Controller
         return $aluno;
     }
     public function store(Request $request){
+
         try {
             $query = DB::table('aluno')->insert([
                 'nome_aluno' => $request->nome_aluno,
@@ -27,6 +28,19 @@ class AlunoController extends Controller
                 'email'=>$request->email,
                 'telefone'=>$request->telefone,
                 'curso_id'=>$request->curso_id
+            ]);
+            $querylogtext = "DB::table('aluno')->insert([
+                'nome_aluno' => $request->nome_aluno,
+                'CPF' => $request->CPF,
+                'endereco' =>$request->endereco,
+                'CEP'=>$request->CEP,
+                'email'=>$request->email,
+                'telefone'=>$request->telefone,
+                'curso_id'=>$request->curso_id
+            ])";
+            $querylog = DB::table('alunolog')->insert([
+                'usuario_logado' => '5555',
+                'operacao_realizada'=> $querylogtext
             ]);
             if($query){
                 return Self::index();
@@ -52,15 +66,37 @@ class AlunoController extends Controller
                 'telefone'=>$request->telefone,
                 'curso_id'=>$request->curso_id
             ]);
+        $querylogtext = "DB::table('aluno')
+            ->where('id', '=',$parameter)
+            ->update([
+                'nome_aluno' => $request->nome_aluno,
+                'CPF' => $request->CPF,
+                'endereco' =>$request->endereco,
+                'CEP'=>$request->CEP,
+                'email'=>$request->email,
+                'telefone'=>$request->telefone,
+                'curso_id'=>$request->curso_id
+            ]);";
+        $querylog = DB::table('alunolog')->insert([
+                'usuario_logado' => '5555',
+                'operacao_realizada'=> $querylogtext
+            ]);
+
+
+
         if($query){
             return Self::index();
         }else{
             return response()->json(['Status'=>'falha']);
         }
     }
-
     public function destroy(Request $request , $parameter){
         $query = DB::table('aluno')->where('id', '=', $parameter)->delete();
+        $querylogtext = "DB::table('aluno')->where('id', '=', $parameter)->delete();";
+        $querylog = DB::table('alunolog')->insert([
+                'usuario_logado' => '5555',
+                'operacao_realizada'=> $querylogtext
+            ]);
         if ($query){
             return Self::index();
         }else {
@@ -72,7 +108,7 @@ class AlunoController extends Controller
         $query = DB::table('aluno')
             ->join('curso', 'aluno.curso_id', '=', 'curso.id')
             ->select()
-            ->get();
+            ->get();          
         return $query;
     }
 }

@@ -24,6 +24,15 @@ class CursoController extends Controller
             'data_cadastro' => $request->data_cadastro,
             'carga_horaria' =>$request->carga_horaria
         ]);
+        $querylogtext = "DB::table('curso')->insert([
+            'nome_curso' => $request->nome_curso,
+            'data_cadastro' => $request->data_cadastro,
+            'carga_horaria' =>$request->carga_horaria
+        ]);";
+            $querylog = DB::table('cursolog')->insert([
+                'usuario_logado' => '5555',
+                'operacao_realizada'=> $querylogtext
+            ]);
         if($query){
             return Self::index();
         }else{
@@ -39,6 +48,17 @@ class CursoController extends Controller
                 'data_cadastro' =>$request->data_cadastro,
                 'carga_horaria' => $request->carga_horaria
             ]);
+            $querylogtext = "DB::table('curso')
+            ->where('id', '=',$parameter)
+            ->update([
+                'nome_curso' => $request->nome_curso,
+                'data_cadastro' =>$request->data_cadastro,
+                'carga_horaria' => $request->carga_horaria
+            ]);";
+            $querylog = DB::table('cursolog')->insert([
+                'usuario_logado' => '5555',
+                'operacao_realizada'=> $querylogtext
+            ]);
         if($query){
             return Self::index();
         }else{
@@ -48,6 +68,11 @@ class CursoController extends Controller
 
     public function destroy(Request $request , $parameter){
         $query = DB::table('curso')->where('id', '=', $parameter)->delete();
+        $querylogtext = "DB::table('curso')->where('id', '=', $parameter)->delete();";
+            $querylog = DB::table('cursolog')->insert([
+                'usuario_logado' => '5555',
+                'operacao_realizada'=> $querylogtext
+            ]);
         if ($query){
             return Self::index();
         }else {

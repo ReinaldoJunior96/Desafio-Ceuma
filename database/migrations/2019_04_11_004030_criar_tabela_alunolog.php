@@ -15,14 +15,9 @@ class CriarTabelaAlunolog extends Migration
     {
         Schema::create('alunolog', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nome_aluno', 60);
-            $table->integer('CPF')->unique();
-            $table->text('endereco');
-            $table->integer('CEP')->unique();
-            $table->string('email',50)->unique();
-            $table->string('telefone');
-            $table->integer('curso_id'); // Faz referênccia ao curso dele
             $table->string('usuario_logado');
+            $table->date('data');
+            $table->text('operacao_realizada');
         });
     }
 

@@ -81,8 +81,8 @@
               </div>
               <div class="form-group formcrud col-sm-4">
                 <label for="inputAddress2">Curso</label>
-                <select class="custom-select" name="curso_id" value="<?php echo $aluno->curso_id ?>">
-                <option selected>Selecione o curso</option>
+                <select class="custom-select" name="curso_id">
+                <option selected value="<?php echo $aluno->curso_id ?>">Selecione o curso</option>
                 <?php 
                   foreach ($cursos as $curso) {
                     echo "<option value=".$curso->id.">".$curso->nome_curso."</option>";

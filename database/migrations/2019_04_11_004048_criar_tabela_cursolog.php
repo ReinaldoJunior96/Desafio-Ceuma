@@ -15,10 +15,9 @@ class CriarTabelaCursolog extends Migration
     {
         Schema::create('cursolog', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nome_curso', 60);
-            $table->date('data_cadastro');
-            $table->string('carga_horaria',60);
             $table->string('usuario_logado');
+            $table->date('data');
+            $table->text('operacao_realizada');
         });
     }
 
