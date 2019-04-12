@@ -29,7 +29,8 @@ class CursoController extends Controller
             'data_cadastro' => $request->data_cadastro,
             'carga_horaria' =>$request->carga_horaria
         ]);";
-            $querylog = DB::table('cursolog')->insert([
+        
+        $querylog = DB::table('cursolog')->insert([
                 'usuario_logado' => '5555',
                 'operacao_realizada'=> $querylogtext
             ]);
