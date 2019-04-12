@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::post('/login/{user}/{senha}','UsuarioController@login');
+Route::post('/curso/alunos/{parameter}','CursoController@AlunosPorCurso');
+//Route::post('/login/{user}/{senha}','UsuarioController@login');
 Route::resource('curso', 'CursoController');
 Route::resource('aluno', 'AlunoController');

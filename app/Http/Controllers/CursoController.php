@@ -54,4 +54,8 @@ class CursoController extends Controller
             return response()->json(['Status' => 'falha']);
         }
     }
+
+    public function AlunosPorCurso(Request $request, $parameter){
+        return Curso::find($parameter)->Alunos;
+    }
 }
