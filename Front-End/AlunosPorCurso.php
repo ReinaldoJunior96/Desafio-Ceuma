@@ -47,64 +47,7 @@
     </span>
   </div>
 </nav>
-    <div class="container my-2">
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-          Conexão Status: <strong>Conectado!</strong>
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span class="float-right" aria-hidden="true">&times;</span>
-          </button>
-        </div>
-    </div>
-    <div class="container my-2">
-        <h2 class="titulocrud">Cadastro Curso</h2>
-        <form action="cURL/cURLCurso/POST_Curso.php" method="POST">
-          <div class="form-row">
-            <div class="form-group formcrud col-md-12">
-              <label for="inputEmail4">Nome</label>
-              <input type="text" name="nome_curso" class="form-control" id="inputEmail4">
-            </div>
-          </div>
-          <div class="form-row">
-              <div class="form-group formcrud col-sm-6">
-                <label for="inputAddress2">Data Cadastro</label>
-                <input type="date" name="data_cadastro" class="form-control" id="inputAddress2">
-              </div>
-              <div class="form-group formcrud col-sm-6">
-                <label for="inputAddress">Carga Horária</label>
-                <input type="text" name="carga_horaria" class="form-control" id="inputAddress">
-              </div>
-          </div>
-          <button type="submit" class="btn text-light col-sm-3">Adicionar</button>
-        </form>
-    </div>
-    <div class="container my-3">
-        <table class="table table-sm">
-      <thead class="tablehead">
-        <tr>
-          <th scope="col">Curso</th>
-          <th scope="col">Data Cadastro</th>
-          <th scope="col">Carga Horária</th>
-          <th scope="col"></th>
-          <th scope="col"></th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php 
-            foreach ($cursos as $curso) {
-                echo "
-                    <tr>
-                      <td><a href='AlunosPorCurso.php?curso=".$curso->id."'>".$curso->nome_curso."</a></td>
-                      <td>".date('d/m/Y', strtotime($curso->data_cadastro))."</td>
-                      <td>".$curso->carga_horaria."</td>
-                      <td><a href='Edit_Curso.php?id=".$curso->id."'><i class='fas fa-user-edit'></i></a></td>
-                      <td><a href='cURL/cURLCurso/DELETE_Curso.php?id=".$curso->id."'><i class='fas fa-trash-alt'></i></a></td>
-                    </tr>
-                ";
-            }
-        ?>        
-      </tbody>
-    </table>
-    </div>
+    
     
         
     <!-- JavaScript (Opcional) -->
