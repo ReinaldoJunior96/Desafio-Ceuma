@@ -67,4 +67,12 @@ class AlunoController extends Controller
             return response()->json(['Status' => 'falha']);
         }
     }
+
+    public function alunosjoincursos(){
+        $query = DB::table('aluno')
+            ->join('curso', 'aluno.curso_id', '=', 'curso.id')
+            ->select()
+            ->get();
+        return $query;
+    }
 }

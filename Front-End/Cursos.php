@@ -89,6 +89,7 @@
         </tr>
       </thead>
       <tbody>
+        <a href="Cursos_excel.php"><button type="button" class="btn text-light float-right col-sm-2">Gerar Excel</button></a>
         <?php 
             foreach ($cursos as $curso) {
                 echo "

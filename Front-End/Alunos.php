@@ -114,6 +114,7 @@
         </tr>
       </thead>
       <tbody>
+        <a href="Alunos_excel.php"><button type="button" class="btn text-light float-right col-sm-2">Gerar Excel</button></a>
         <?php 
             foreach ($alunos as $aluno) {
                 echo "
