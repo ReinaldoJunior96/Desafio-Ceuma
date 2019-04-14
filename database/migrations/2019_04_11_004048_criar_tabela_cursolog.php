@@ -14,10 +14,11 @@ class CriarTabelaCursolog extends Migration
     public function up()
     {
         Schema::create('cursolog', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('usuario_logado');
+            $table->increments('id');
+            $table->string('usuario_logado', 50);
             $table->date('data');
             $table->text('operacao_realizada');
+            $table->string('operacao', 20);
         });
     }
 

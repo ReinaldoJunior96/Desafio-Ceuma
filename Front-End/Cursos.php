@@ -1,16 +1,17 @@
 <?php
+    @ob_start();
+    session_start();
+    if((!isset ($_SESSION['usuario']) == true) and (!isset ($_SESSION['senha']) == true)){
+      unset($_SESSION['usuario']);
+      unset($_SESSION['senha']);
+      unset($_SESSION['code_user']);
+      header('location:index.php');
+    }
     $url_aluno = file_get_contents('http://localhost:8000/api/aluno');
     $url_curso = file_get_contents('http://localhost:8000/api/curso');
     $alunos = json_decode($url_aluno);
     $cursos = json_decode($url_curso);
-
-
-    // session_start();
-    // if((!isset ($_SESSION['cod_user']) == true)){
-    //   unset($_SESSION['login']);
-    //   unset($_SESSION['senha']);
-    //   header('location:index.php');
-    // }
+    
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -43,13 +44,13 @@
       </li>
     </ul>
     <span class="navbar-text text-light">
-      <a href="" class="logout text-light"><i class="fas fa-sign-out-alt"></i>Sair</a>
+      <a href="Destruir.php" class="logout text-light"><i class="fas fa-sign-out-alt"></i>Sair</a>
     </span>
   </div>
 </nav>
     <div class="container my-2">
         <div class="alert alert-success alert-dismissible fade show" role="alert">
-          Conexão Status: <strong>Conectado!</strong>
+          Usuário <strong><?= $_SESSION['usuario']?></strong>, bem-vindo(a)
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span class="float-right" aria-hidden="true">&times;</span>
           </button>
@@ -58,6 +59,8 @@
     <div class="container my-2">
         <h2 class="titulocrud">Cadastro Curso</h2>
         <form action="cURL/cURLCurso/POST_Curso.php" method="POST">
+          <input type="hidden" name="modulo" value="curso" class="form-control" id="inputEmail4">
+          <input type="hidden" name="usuario" value="<?= $_SESSION['usuario']?>" class="form-control" id="inputEmail4">
           <div class="form-row">
             <div class="form-group formcrud col-md-12">
               <label for="inputEmail4">Nome</label>
@@ -89,7 +92,7 @@
         </tr>
       </thead>
       <tbody>
-        <a href="Cursos_excel.php"><button type="button" class="btn text-light float-right col-sm-2">Gerar Excel</button></a>
+        <a href="Gerar_Excel/Cursos_excel.php"><button type="button" class="btn text-light float-right col-sm-2">Gerar Excel</button></a>
         <?php 
             foreach ($cursos as $curso) {
                 echo "

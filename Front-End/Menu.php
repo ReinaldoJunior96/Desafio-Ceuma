@@ -1,52 +1,29 @@
-<?php 
-
-$url       = 'http://localhost:8000/api/aluno';
-$cabecalho = array('Content-Type: application/json', 'Accept: application/json');
-$campos    = json_encode(array(
-				'nome_aluno'=> $_POST['nome_aluno'],
-				'CPF'=> $_POST['CPF'],
-				'endereco'=> $_POST['endereco'],
-				'CEP'=>$_POST['CEP'],
-				'email'=>$_POST['email'],
-				'telefone'=>$_POST['telefone'],
-				'curso_id'=>$_POST['curso_id'],
-				'usuario'=> $_POST['usuario'],
-				'modulo'=> $_POST['modulo']
-			));
-
-$ch = curl_init();
-
-curl_setopt($ch, CURLOPT_URL,            $url);
-curl_setopt($ch, CURLOPT_HTTPHEADER,     $cabecalho);
-curl_setopt($ch, CURLOPT_POSTFIELDS,     $campos);
-curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_POST,           true);
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST,  'POST');
-
-$resposta = curl_exec($ch);
-//echo $resposta;
-curl_close($ch);
-header("Refresh: 1;url=../../Alunos.php");
-
-
+<?php
+    @ob_start();
+    session_start();
+    if((!isset ($_SESSION['usuario']) == true) and (!isset ($_SESSION['senha']) == true)){
+      unset($_SESSION['usuario']);
+      unset($_SESSION['senha']);
+      unset($_SESSION['code_user']);
+      header('location:index.php');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <title>Desafio Grupo Ceuma</title>
+  	<title>Desafio Grupo Ceuma</title>
     <!-- Meta tags Obrigatórias -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand" >
-        <img src="../../images/perfil.png" width="30" height="30" class="d-inline-block align-top img-icon" alt="">
+        <img src="images/perfil.png" width="30" height="30" class="d-inline-block align-top img-icon" alt="">
         Desafio Ceuma
       </a>
   <button class="navbar-toggler corbotao" type="button" data-toggle="collapse" data-target="#textoNavbar" aria-controls="textoNavbar" aria-expanded="false" aria-label="Alterna navegação">
@@ -62,25 +39,17 @@ header("Refresh: 1;url=../../Alunos.php");
       </li>
     </ul>
     <span class="navbar-text text-light">
-      <a href="" class="logout text-light"><i class="fas fa-sign-out-alt"></i>Sair</a>
+      <a href="Destruir.php" class="logout text-light"><i class="fas fa-sign-out-alt"></i>Sair</a>
     </span>
   </div>
 </nav>
-    <div class="container my-2">        
-        <?php 
-          if ($resposta == 1) {
-            echo "
-            <div class='alert alert-success alert-dismissible fade show' role='alert'>
-            <strong>Operação realizada com sucesso,</strong> você será redirecionado em breve";
-          }else{
-            echo "
-            <div class='alert alert-danger alert-dismissible fade show' role='alert'>
-            <strong>Falha ao realizar operação,</strong> você não tem permissão para realizar está operação";
-          }
-        ?>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span class="float-right" aria-hidden="true">&times;</span>
-        </button>
+    <div class="container my-2">
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          Usuário <strong><?= $_SESSION['usuario']?></strong>, bem-vindo(a)
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span class="float-right" aria-hidden="true">&times;</span>
+          </button>
+        </div>
     </div>
     
         

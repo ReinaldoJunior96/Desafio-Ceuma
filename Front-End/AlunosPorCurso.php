@@ -1,4 +1,13 @@
 <?php
+    @ob_start();
+    session_start();
+    if((!isset ($_SESSION['usuario']) == true) and (!isset ($_SESSION['senha']) == true)){
+      unset($_SESSION['usuario']);
+      unset($_SESSION['senha']);
+      unset($_SESSION['code_user']);
+      header('location:index.php');
+    }
+    
     $url_aluCursos       = 'http://localhost:8000/api/curso/alunos/'.$_GET['curso'];
     $url_cursos          = 'http://localhost:8000/api/curso/'.$_GET['curso'];
     $cabecalho = array('Content-Type: application/json', 'Accept: application/json');
@@ -58,17 +67,19 @@
       </li>
     </ul>
     <span class="navbar-text text-light">
-      <a href="" class="logout text-light"><i class="fas fa-sign-out-alt"></i>Sair</a>
+      <a href="Destruir.php" class="logout text-light"><i class="fas fa-sign-out-alt"></i>Sair</a>
     </span>
   </div>
 </nav>
 <div class="container my-2">
+        <div class="container my-2">
         <div class="alert alert-success alert-dismissible fade show" role="alert">
-          Conexão Status: <strong>Conectado!</strong>
+          Usuário <strong><?= $_SESSION['usuario']?></strong>, bem-vindo(a)
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span class="float-right" aria-hidden="true">&times;</span>
           </button>
         </div>
+    </div>
     </div>
     <div class="container">
       <?php foreach ($cursos as $curso) { echo "<h2 class='titulocrud'>Alunos do curso de ".$curso->nome_curso."</h2>"; } ?>

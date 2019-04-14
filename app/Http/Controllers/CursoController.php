@@ -19,68 +19,81 @@ class CursoController extends Controller
     }
 
     public function store(Request $request){
-        $query = DB::table('curso')->insert([
+        $verifica_permissao = DB::table('usuario')
+        ->select()
+        ->where('usuario','=',$request->usuario)
+        ->where('modulo','=',$request->modulo)
+        ->where('operacao','LIKE','%I%')
+        ->count();
+        if ($verifica_permissao == 1) {
+            $query = DB::table('curso')->insert([
             'nome_curso' => $request->nome_curso,
             'data_cadastro' => $request->data_cadastro,
             'carga_horaria' =>$request->carga_horaria
-        ]);
-        $querylogtext = "DB::table('curso')->insert([
-            'nome_curso' => $request->nome_curso,
-            'data_cadastro' => $request->data_cadastro,
-            'carga_horaria' =>$request->carga_horaria
-        ]);";
-        
-        $querylog = DB::table('cursolog')->insert([
-                'usuario_logado' => '5555',
-                'operacao_realizada'=> $querylogtext
             ]);
-        if($query){
-            return Self::index();
-        }else{
-            return response()->json(['Status'=>'falha']);
+            $querylogtext = "DB::table('curso')->insert([
+            'nome_curso' => $request->nome_curso,
+            'data_cadastro' => $request->data_cadastro,
+            'carga_horaria' =>$request->carga_horaria
+            ]);";
+            $querylog = DB::table('cursolog')->insert([
+                'usuario_logado' => $request->usuario,
+                'operacao_realizada'=> $querylogtext,
+                'operacao'=> 'I'
+            ]);
+            return $verifica_permissao;
         }
     }
 
     public function update(Request $request, $parameter ){
-        $query = DB::table('curso')
-            ->where('id', '=',$parameter)
-            ->update([
-                'nome_curso' => $request->nome_curso,
-                'data_cadastro' =>$request->data_cadastro,
-                'carga_horaria' => $request->carga_horaria
-            ]);
+        $verifica_permissao = DB::table('usuario')
+        ->select()
+        ->where('usuario','=',$request->usuario)
+        ->where('modulo','=',$request->modulo)
+        ->where('operacao','LIKE','%A%')
+        ->count();
+        if ($verifica_permissao == 1) {
+            $query = DB::table('curso')
+                ->where('id', '=',$parameter)
+                ->update([
+                    'nome_curso' => $request->nome_curso,
+                    'data_cadastro' =>$request->data_cadastro,
+                    'carga_horaria' => $request->carga_horaria
+                ]);
             $querylogtext = "DB::table('curso')
-            ->where('id', '=',$parameter)
-            ->update([
-                'nome_curso' => $request->nome_curso,
-                'data_cadastro' =>$request->data_cadastro,
-                'carga_horaria' => $request->carga_horaria
-            ]);";
+                ->where('id', '=',$parameter)
+                ->update([
+                    'nome_curso' => $request->nome_curso,
+                    'data_cadastro' =>$request->data_cadastro,
+                    'carga_horaria' => $request->carga_horaria
+                ]);";
             $querylog = DB::table('cursolog')->insert([
-                'usuario_logado' => '5555',
-                'operacao_realizada'=> $querylogtext
+                    'usuario_logado' => $request->usuario,
+                    'operacao_realizada'=> $querylogtext,
+                    'operacao'=> 'A'
             ]);
-        if($query){
-            return Self::index();
-        }else{
-            return response()->json(['Status'=>'falha']);
+            return $verifica_permissao;
         }
     }
 
     public function destroy(Request $request , $parameter){
-        $query = DB::table('curso')->where('id', '=', $parameter)->delete();
-        $querylogtext = "DB::table('curso')->where('id', '=', $parameter)->delete();";
+        $verifica_permissao = DB::table('usuario')
+        ->select()
+        ->where('usuario','=',$request->usuario)
+        ->where('modulo','=',$request->modulo)
+        ->where('operacao','LIKE','%E%')
+        ->count();
+        if ($verifica_permissao == 1) {
+            $query = DB::table('curso')->where('id', '=', $parameter)->delete();
+            $querylogtext = "DB::table('curso')->where('id', '=', $parameter)->delete();";
             $querylog = DB::table('cursolog')->insert([
-                'usuario_logado' => '5555',
-                'operacao_realizada'=> $querylogtext
-            ]);
-        if ($query){
-            return Self::index();
-        }else {
-            return response()->json(['Status' => 'falha']);
+                'usuario_logado' => $request->usuario,
+                'operacao_realizada'=> $querylogtext,
+                'operacao'=> 'E'
+                ]);
+            return $verifica_permissao;
         }
     }
-
     public function AlunosPorCurso(Request $request, $parameter){
         return Curso::find($parameter)->Alunos;
     }

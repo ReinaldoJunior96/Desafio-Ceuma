@@ -1,4 +1,12 @@
 <?php
+    @ob_start();
+    session_start();
+    if((!isset ($_SESSION['usuario']) == true) and (!isset ($_SESSION['senha']) == true)){
+      unset($_SESSION['usuario']);
+      unset($_SESSION['senha']);
+      unset($_SESSION['code_user']);
+      header('location:index.php');
+    }
     $url_aluno = file_get_contents('http://localhost:8000/api/aluno/'.$_GET['id']);
     $url_curso = file_get_contents('http://localhost:8000/api/curso');
     $alunos = json_decode($url_aluno);
@@ -35,13 +43,13 @@
       </li>
     </ul>
     <span class="navbar-text text-light">
-      <a href="" class="logout text-light"><i class="fas fa-sign-out-alt"></i>Sair</a>
+      <a href="Destruir.php" class="logout text-light"><i class="fas fa-sign-out-alt"></i>Sair</a>
     </span>
   </div>
 </nav>
     <div class="container my-2">
         <div class="alert alert-success alert-dismissible fade show" role="alert">
-          Conexão Status: <strong>Conectado!</strong>
+          Usuário <strong><?= $_SESSION['usuario']?></strong>, bem-vindo(a)
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span class="float-right" aria-hidden="true">&times;</span>
           </button>
@@ -53,6 +61,8 @@
           foreach ($alunos as $aluno){
         ?>
         <form action="cURL/cURLAluno/PUT_Aluno.php" method="POST">
+          <input type="hidden" name="modulo" value="aluno" class="form-control" id="inputEmail4">
+          <input type="hidden" name="usuario" value="<?= $_SESSION['usuario']?>" class="form-control" id="inputEmail4">
           <input type="hidden" name="id" value="<?php echo $aluno->id ?>">
           <div class="form-row">
             <div class="form-group formcrud col-md-8">

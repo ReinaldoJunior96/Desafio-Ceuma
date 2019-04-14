@@ -17,6 +17,8 @@ class CriarTabelaUsuario extends Migration
             $table->bigIncrements('id');
             $table->string('usuario');
             $table->string('senha');
+            $table->string('modulo');
+            $table->string('operacao');
         });
     }
 

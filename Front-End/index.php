@@ -20,7 +20,7 @@
     				<img src="images/perfil.png">
     				<h2 class="font-weight-bold text-light my-2">Desenvolvedor Ceuma</h2>
     			</div>
-    			<form action="cURL/POST_Login.php" method="POST" class="col-12">
+    			<form action="" method="POST" class="col-12">
     				 <div class="form-group">
     				 	<label for="exampleInputEmail1" class=""><i  class="fas fa-user"></i> Username</label>
     				 	<input type="text" name="usuario" class="form-control" >    				 	
@@ -35,6 +35,15 @@
     					<a href="#">Esqueceu sua senha?</a>
     				</div>
     			</form>
+                <?php 
+                if (isset($_POST['usuario']) AND isset($_POST['senha'])) {
+                    if (!empty($_POST['usuario']) AND !empty($_POST['senha'])) {
+                        require_once('ClassesDAO/UsuarioDAO.php');
+                        $login = new UsuarioDAO();
+                        $login->Login($_POST['usuario'],$_POST['senha']);
+                    }
+                }
+                ?>
     		</div>    		
     	</div>
     </div>
