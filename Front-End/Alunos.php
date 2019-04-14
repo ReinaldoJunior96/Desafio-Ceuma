@@ -63,11 +63,11 @@
           <div class="form-row">
             <div class="form-group formcrud col-md-8">
               <label for="inputEmail4">Nome Completo</label>
-              <input type="text" name="nome_aluno" class="form-control" id="inputEmail4">
+              <input type="text" name="nome_aluno" maxlength="100" class="form-control" id="inputEmail4" required="">
             </div>
             <div class="form-group formcrud col-md-4">
               <label for="inputPassword4">CPF</label>
-              <input maxlength="11" type="text" name="CPF" class="form-control" id="inputPassword4" >
+              <input maxlength="11" type="text" name="CPF" class="form-control" id="inputPassword4" required="" >
               <small id="passwordHelpBlock" class="form-text text-muted">
                 Apenas números.
               </small>
@@ -83,11 +83,14 @@
           <div class="form-row">
               <div class="form-group formcrud col-sm-8">
                 <label for="inputAddress2">CEP</label>
-                <input type="text" name="CEP" class="form-control" id="inputAddress2">
+                <input type="text" maxlength="9" name="CEP" class="form-control" id="inputAddress2">
+                <small id="passwordHelpBlock" class="form-text text-muted">
+                Apenas números.
+              </small>
               </div>
               <div class="form-group formcrud col-sm-4">
                 <label for="inputAddress2">Curso</label>
-                <select class="custom-select" name="curso_id">
+                <select class="custom-select" name="curso_id" required="">
                 <option selected>Selecione o curso</option>
                 <?php 
                   foreach ($cursos as $curso) {
@@ -101,11 +104,11 @@
           <div class="form-row">
             <div class="form-group formcrud col-md-6">
               <label for="inputCity">E-mail</label>
-              <input type="email" name="email" class="form-control" id="inputCity">
+              <input type="email" maxlength="50" name="email" class="form-control" id="inputCity" required="">
             </div>
             <div class="form-group formcrud col-md-6">
               <label for="inputCity">Telefone</label>
-              <input type="text" name="telefone" class="form-control" id="inputCity" placeholder="(00)984758486">
+              <input type="text" name="telefone"  class="form-control" id="inputCity" placeholder="(00)984758486" required="">
             </div>
           </div>
 

@@ -67,11 +67,11 @@
           <div class="form-row">
             <div class="form-group formcrud col-md-8">
               <label for="inputEmail4">Nome Completo</label>
-              <input type="text" name="nome_aluno" class="form-control" id="inputEmail4" value="<?php echo $aluno->nome_aluno ?>">
+              <input type="text" required=""> name="nome_aluno" class="form-control" id="inputEmail4" value="<?php echo $aluno->nome_aluno ?>">
             </div>
             <div class="form-group formcrud col-md-4">
               <label for="inputPassword4">CPF</label>
-              <input maxlength="11" type="text" name="CPF" value="<?php echo $aluno->CPF ?>" class="form-control" id="inputPassword4 " >
+              <input maxlength="11" type="text" required="" name="CPF" value="<?php echo $aluno->CPF ?>" class="form-control" id="inputPassword4 " >
               <small id="passwordHelpBlock" class="form-text text-muted">
                 Apenas números.
               </small>
@@ -105,11 +105,11 @@
           <div class="form-row">
             <div class="form-group formcrud col-md-6">
               <label for="inputCity">E-mail</label>
-              <input type="email" name="email" class="form-control" id="inputCity" value="<?php echo $aluno->email ?>">
+              <input type="email" name="email" required="" class="form-control" id="inputCity" value="<?php echo $aluno->email ?>">
             </div>
             <div class="form-group formcrud col-md-6">
               <label for="inputCity">Telefone</label>
-              <input type="text" name="telefone" class="form-control" id="inputCity" placeholder="(00)984758486" value="<?php echo $aluno->telefone ?>">
+              <input type="text" name="telefone" required="" class="form-control" id="inputCity" placeholder="(00)984758486" value="<?php echo $aluno->telefone ?>">
             </div>
           </div>
 
