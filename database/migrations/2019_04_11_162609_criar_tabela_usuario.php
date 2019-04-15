@@ -15,10 +15,10 @@ class CriarTabelaUsuario extends Migration
     {
         Schema::create('usuario', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('usuario');
-            $table->string('senha');
-            $table->string('modulo');
-            $table->string('operacao');
+            $table->string('usuario', 20);
+            $table->string('senha', 20);
+            $table->string('modulo', 20);
+            $table->string('operacao', 10);
         });
     }
 

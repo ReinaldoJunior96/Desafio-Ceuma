@@ -21,36 +21,101 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" >
-        <img src="images/perfil.png" width="30" height="30" class="d-inline-block align-top img-icon" alt="">
-        Desafio Ceuma
-      </a>
-  <button class="navbar-toggler corbotao" type="button" data-toggle="collapse" data-target="#textoNavbar" aria-controls="textoNavbar" aria-expanded="false" aria-label="Alterna navegação">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="textoNavbar">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link text-light" href="Alunos.php">Alunos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-light" href="Cursos.php">Cursos</a>
-      </li>
-    </ul>
-    <span class="navbar-text text-light">
-      <a href="Destruir.php" class="logout text-light"><i class="fas fa-sign-out-alt"></i>Sair</a>
-    </span>
-  </div>
-</nav>
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <div class="container">
+        <a class="navbar-brand text-dark font-weight-bold" href="Menu.php" >
+          <!-- <img src="images/perfil.png" width="30" height="30" class="d-inline-block align-top img-icon" alt=""> -->
+          Desafio Ceuma
+        </a>
+        <button class="navbar-toggler corbotao" type="button" data-toggle="collapse" data-target="#textoNavbar" aria-controls="textoNavbar" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="textoNavbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link text-dark font-weight-bold" href="Alunos.php">Alunos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark font-weight-bold" href="Cursos.php">Cursos</a>
+            </li>
+          </ul>
+          <span class="navbar-text text-light">
+            <a href="Destruir.php" class="logout text-dark"><i class="fas fa-sign-out-alt"></i>Sair</a>
+          </span>
+        </div>
+      </div>
+    </nav>
     <div class="container my-2">
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
+      
+        <!-- <div class="alert alert-success alert-dismissible fade show" role="alert">
           Usuário <strong><?= $_SESSION['usuario']?></strong>, bem-vindo(a)
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span class="float-right" aria-hidden="true">&times;</span>
           </button>
-        </div>
+        </div> -->
     </div>
+    
+
+
+    <div class="container">
+      <div class="card text-center ">
+        <div class="card-body">
+          <i class="fas fa-users"></i>
+          <h5 class="card-title">Alunos Cadastrados</h5>
+          <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 20%"></div>
+          </div>
+        </div>
+        <div class="card-footer text-muted">
+          2 dias atrás
+        </div>
+      </div>
+
+
+
+
+
+
+
+      <div class="card text-center my-2">
+        <div class="card-body">
+          <i class="fas fa-book"></i>
+          <h5 class="card-title">Cursos Cadastrados</h5>
+        </div>
+        <div class="card-deck mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Medicina</h5>
+              <div class="progress">
+              <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 1%"></div>
+            </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+            <h5 class="card-title">Adminsitração</h5>
+            <div class="progress">
+              <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+            </div>
+          </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+            <h5 class="card-title">Direito</h5>
+            <div class="progress">
+            <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+          </div>
+          </div>
+          </div>
+        </div>
+
+
+        <div class="card-footer text-muted">
+          
+        </div>
+      </div>
+      </div>
+      
     
         
     <!-- JavaScript (Opcional) -->

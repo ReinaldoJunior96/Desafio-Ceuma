@@ -15,13 +15,13 @@ class CriarTabelaAluno extends Migration
     {
         Schema::create('aluno', function (Blueprint $table) {
             $table->increments('id'); // codigo do aluno
-            $table->string('nome_aluno', 60);
+            $table->string('nome_aluno', 100);
             $table->integer('CPF')->unique();
             $table->text('endereco');
-            $table->integer('CEP')->unique();
+            $table->integer('CEP', 8)->unique();
             $table->string('email',50)->unique();
-            $table->string('telefone');
-            $table->integer('curso_id'); // Faz referênccia ao curso dele
+            $table->string('telefone', 50);
+            $table->integer('curso_id'); // Fazer um alter table para referenciar a foreign no id curso!!
         });
     }
 

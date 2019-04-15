@@ -52,11 +52,12 @@ class AlunoController extends Controller
                 return $verifica_permissao;
             }
         } catch (QueryException $e) {
-            return response()->json(['status'=>'Erro ao tentar executar query']);
+            return response()->json(['Status'=>'Erro',404]);
         }
     }
 
     public function update(Request $request, $parameter ){
+        try {
         $verifica_permissao = DB::table('usuario')
         ->select()
         ->where('usuario','=',$request->usuario)
@@ -93,8 +94,12 @@ class AlunoController extends Controller
                 ]);
             return $verifica_permissao;
         }
+        } catch (QueryException $e) {
+            return response()->json(['status'=>'Erro ao tentar executar query']);
+        }
     }
     public function destroy(Request $request , $parameter){
+        try{
         $verifica_permissao = DB::table('usuario')
         ->select()
         ->where('usuario','=',$request->usuario)
@@ -111,13 +116,20 @@ class AlunoController extends Controller
             ]);
             return $verifica_permissao;
         }
+        } catch (QueryException $e) {
+            return response()->json(['status'=>'Erro ao tentar executar query']);
+        }
     }
 
     public function alunosjoincursos(){
+        try{
         $query = DB::table('aluno')
             ->join('curso', 'aluno.curso_id', '=', 'curso.id')
             ->select()
             ->get();          
         return $query;
+        } catch (QueryException $e) {
+            return response()->json(['status'=>'Erro ao tentar executar query']);
+        }
     }
 }

@@ -31,42 +31,44 @@ $cursos = json_decode($url_curso);
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" >
-        <img src="images/perfil.png" width="30" height="30" class="d-inline-block align-top img-icon" alt="">
-        Desafio Ceuma
-    </a>
-    <button class="navbar-toggler corbotao" type="button" data-toggle="collapse" data-target="#textoNavbar" aria-controls="textoNavbar" aria-expanded="false" aria-label="Alterna navegação">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="textoNavbar">
-        <ul class="navbar-nav mr-auto">
+<nav class="navbar navbar-expand-lg navbar-light ">
+      <div class="container">
+        <a class="navbar-brand text-dark font-weight-bold" href="Menu.php" >
+          <!-- <img src="images/perfil.png" width="30" height="30" class="d-inline-block align-top img-icon" alt=""> -->
+          Desafio Ceuma
+        </a>
+        <button class="navbar-toggler corbotao" type="button" data-toggle="collapse" data-target="#textoNavbar" aria-controls="textoNavbar" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="textoNavbar">
+          <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link text-light" href="Alunos.php">Alunos</a>
+              <a class="nav-link text-dark font-weight-bold" href="Alunos.php">Alunos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-light" href="Cursos.php">Cursos</a>
+              <a class="nav-link text-dark font-weight-bold" href="Cursos.php">Cursos</a>
             </li>
-        </ul>
-        <span class="navbar-text text-light">
-      <a href="Destruir.php" class="logout text-light"><i class="fas fa-sign-out-alt"></i>Sair</a>
-    </span>
-    </div>
-</nav>
-<div class="container my-2">
+          </ul>
+          <span class="navbar-text text-light">
+            <a href="Destruir.php" class="logout text-dark"><i class="fas fa-sign-out-alt"></i>Sair</a>
+          </span>
+        </div>
+      </div>
+    </nav>
+<!-- <div class="container my-2">
         <div class="alert alert-success alert-dismissible fade show" role="alert">
           Usuário <strong><?= $_SESSION['usuario']?></strong>, bem-vindo(a)
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span class="float-right" aria-hidden="true">&times;</span>
           </button>
         </div>
-    </div>
+    </div> -->
 <?php
 foreach ($cursos as $curso){
 
 ?>
-<div class="container my-2">
-    <h2 class="titulocrud">Editar Curso</h2>
+<div class="container bg-form rounded-bottom">
+    <h2 class="titulocrud">Alterar Curso</h2>
     <form action="cURL/cURLCurso/PUT_Curso.php" method="POST">
         <input type="hidden" name="modulo" value="curso" class="form-control" id="inputEmail4">
         <input type="hidden" name="usuario" value="<?= $_SESSION['usuario']?>" class="form-control" id="inputEmail4">
@@ -87,7 +89,7 @@ foreach ($cursos as $curso){
                 <input type="text" name="carga_horaria" class="form-control" id="inputAddress" value="<?php echo $curso->carga_horaria ?>">
             </div>
         </div>
-        <button type="submit" class="btn text-light col-sm-3">Editar</button>
+        <button type="submit" class="btn text-light col-sm-2 mb-3">Editar</button>
     </form>
 </div>
 <?php

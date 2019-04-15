@@ -15,10 +15,10 @@ class CriarTabelaAlunolog extends Migration
     {
         Schema::create('alunolog', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('usuario_logado', 50);
-            $table->date('data');
+            $table->string('usuario_logado', 20);
+            $table->date('data'); //mudar para timestamp ~ pré-defenido como current tbm
             $table->text('operacao_realizada');
-            $table->string('operacao', 20);
+            $table->string('operacao', 5); //char
         });
     }
 

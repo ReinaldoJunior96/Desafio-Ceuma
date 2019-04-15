@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 body{
-	
-	background-image: url();
-	/*background-image: linear-gradient(to right, #5f2c82 , #49a09d);*/
+	background: linear-gradient(to right, #141E30,#243B55);
 	background-size: cover;
 }
 .main-section{ 
@@ -12,17 +10,17 @@ body{
 	padding: 0;
 }
 .modal-content{
-	background-color: #3b4652;
+	background: linear-gradient(to left, #C9D6FF,#E2E2E2);
 	opacity: .95;
 	padding: 0 18px;
-	box-shadow: 0px 0px 3px #848484; 
+	/*box-shadow: 0px 0px 3px #848484; */
 }
 .user-img{
 	margin-top: -50px;
 	margin-bottom: 35px;
 }
 .user-img img{
-	height: 100px;
+	height: 120px;
 	width: 130px;
 	border-radius: 5px;
 	box-shadow: 0px 0px 2px #848484; 
@@ -54,38 +52,32 @@ button{
 	margin: 5px, 0 25px;
 }
 .btn{
-	background-color: #48D1CC;
+	background-color: #243B55;
 	font-size: 19px;
 	padding: 7px 14px;
 	border-radius: 5px;
-	border-bottom: 4px solid #20B2AA;
+	border-bottom: 4px solid #141E30;
 }
 .btn:hover, .btn:focus{
-	background-color: #49a09d!important;
-	border-bottom: 4px solid #49a09d!important;
+	background-color: #2193b0!important;
+	border-bottom: 4px solid #2193b0!important;
 }
 .forgot{
-	padding-top: 5px 0 25px;
-	padding: 25px;
-	text-align: left;
-}
-.forgot a{
-	color: #c2fbfe;
-
+	padding: 10px;
+	float: left;
 }
 
 .tablehead{
-	background-color: #3b4652;
+	background-color: #243B55;
 	color: #fff;
 }
 .navbar{
-	background-color: #3b4652;
+	background-color: #fff;
 	color: #fff;
 }
 
 .titulocrud{
 	font-family: 'Roboto Slab', serif;
-	color: #3b4652;
 }
 .img-icon{
 	border-radius: 5px;
@@ -100,4 +92,25 @@ button{
 	background-color: #3b4652;
 	box-shadow: 0px 0px 3px #848484; 
 	border: 80px;
+}
+i.fa-book{
+	font-size: 3em;
+	color: #243B55;
+}
+i.fa-users{
+	font-size: 3em;
+	color: #243B55;
+}
+i.fa-cog{
+	font-size: 1.5em;
+	color: #243B55;
+}
+
+.menu-lateral{
+	background-color: red;
+	height: 500px;
+}
+
+.bg-form{
+	background-color: #fff; 
 }

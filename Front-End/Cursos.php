@@ -26,63 +26,64 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" >
-        <img src="images/perfil.png" width="30" height="30" class="d-inline-block align-top img-icon" alt="">
-        Desafio Ceuma
-      </a>
-  <button class="navbar-toggler corbotao" type="button" data-toggle="collapse" data-target="#textoNavbar" aria-controls="textoNavbar" aria-expanded="false" aria-label="Alterna navegação">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="textoNavbar">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link text-light" href="Alunos.php">Alunos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-light" href="Cursos.php">Cursos</a>
-      </li>
-    </ul>
-    <span class="navbar-text text-light">
-      <a href="Destruir.php" class="logout text-light"><i class="fas fa-sign-out-alt"></i>Sair</a>
-    </span>
-  </div>
-</nav>
-    <div class="container my-2">
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <div class="container">
+        <a class="navbar-brand text-dark font-weight-bold" href="Menu.php" >
+          <!-- <img src="images/perfil.png" width="30" height="30" class="d-inline-block align-top img-icon" alt=""> -->
+          Desafio Ceuma
+        </a>
+        <button class="navbar-toggler corbotao" type="button" data-toggle="collapse" data-target="#textoNavbar" aria-controls="textoNavbar" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="textoNavbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link text-dark font-weight-bold" href="Alunos.php">Alunos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark font-weight-bold" href="Cursos.php">Cursos</a>
+            </li>
+          </ul>
+          <span class="navbar-text text-light">
+            <a href="Destruir.php" class="logout text-dark"><i class="fas fa-sign-out-alt"></i>Sair</a>
+          </span>
+        </div>
+      </div>
+    </nav>
+    <!-- <div class="container my-2">
         <div class="alert alert-success alert-dismissible fade show" role="alert">
           Usuário <strong><?= $_SESSION['usuario']?></strong>, bem-vindo(a)
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span class="float-right" aria-hidden="true">&times;</span>
           </button>
         </div>
-    </div>
-    <div class="container my-2">
-        <h2 class="titulocrud">Cadastro Curso</h2>
+    </div> -->
+    <div class="container bg-form rounded-bottom">
+      <h2 class="titulocrud text-dark "><i class="fas fa-book mr-2" style="font-size: 1em;"></i>Cadastro Cursos </h2>
         <form action="cURL/cURLCurso/POST_Curso.php" method="POST">
           <input type="hidden" name="modulo" value="curso" class="form-control" id="inputEmail4">
           <input type="hidden" name="usuario" value="<?= $_SESSION['usuario']?>" class="form-control" id="inputEmail4">
           <div class="form-row">
             <div class="form-group formcrud col-md-12">
               <label for="inputEmail4">Nome</label>
-              <input type="text" name="nome_curso" class="form-control" id="inputEmail4">
+              <input type="text" name="nome_curso" class="form-control" id="inputEmail4" required="">
             </div>
           </div>
           <div class="form-row">
               <div class="form-group formcrud col-sm-6">
                 <label for="inputAddress2">Data Cadastro</label>
-                <input type="date" name="data_cadastro" class="form-control" id="inputAddress2">
+                <input type="date" name="data_cadastro" class="form-control" id="inputAddress2" required="">
               </div>
               <div class="form-group formcrud col-sm-6">
                 <label for="inputAddress">Carga Horária</label>
-                <input type="text" name="carga_horaria" class="form-control" id="inputAddress">
+                <input type="text" name="carga_horaria" class="form-control" id="inputAddress" required="">
               </div>
           </div>
-          <button type="submit" class="btn text-light col-sm-3">Adicionar</button>
+          <button type="submit" class="btn text-light col-sm-2">Adicionar</button>
         </form>
-    </div>
-    <div class="container my-3">
-        <table class="table table-sm">
-      <thead class="tablehead">
+
+        <table class="table table-sm ">
+      <thead class="tablehead ">
         <tr>
           <th scope="col">Curso</th>
           <th scope="col">Data Cadastro</th>
@@ -92,7 +93,11 @@
         </tr>
       </thead>
       <tbody>
-        <a href="Gerar_Excel/Cursos_excel.php"><button type="button" class="btn text-light float-right col-xl-2">Gerar Excel</button></a>
+        <!-- <a href="Gerar_Excel/Cursos_excel.php"><button type="button" class="btn text-light float-right col-xl-2">Gerar Excel</button></a> -->
+        <i class="fas fa-cog float-right my-2" data-toggle="dropdown"></i>       
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="Gerar_Excel/Cursos_excel.php">Gerar Excel</a>
+            <a class="dropdown-item" href="#">Imprimir</a>
         <?php 
             foreach ($cursos as $curso) {
                 echo "

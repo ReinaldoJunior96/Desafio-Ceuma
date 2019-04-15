@@ -17,22 +17,22 @@
     	<div class="col-sm-12 main-section">
     		<div class="modal-content">
     			<div class="col-12 user-img">
-    				<img src="images/perfil.png">
-    				<h2 class="font-weight-bold text-light my-2">Desenvolvedor Ceuma</h2>
+    				<img src="images/perfilboneco.png">
+    				<h2 class="font-weight-bold text-dark my-2">Desenvolvedor Ceuma</h2>
     			</div>
-    			<form action="" method="POST" class="col-12">
+    			<form action="" method="POST" class="col-sm-12">
     				 <div class="form-group">
-    				 	<label for="exampleInputEmail1" class=""><i  class="fas fa-user"></i> Username</label>
-    				 	<input type="text" name="usuario" class="form-control" >    				 	
+    				 	<label for="exampleInputEmail1" class="text-dark"><i  class="fas fa-user"></i> Usuário</label>
+    				 	<input type="text" name="usuario" class="form-control" placeholder="" required="" >    				 	
     				 </div>
     				 <div class="form-group">
-    				 	<label for="exampleInputEmail1" class=""><i class="fas fa-lock"></i> Password</label>
-    				 	<input type="password" name="senha" class="form-control">    				 	
+    				 	<label for="exampleInputEmail1" class="text-dark"><i class="fas fa-lock"></i> Senha</label>
+    				 	<input type="password" name="senha" class="form-control" required="">    				 	
     				 </div>
-    				<button type="submit" class="btn"><i class="fas fa-sign-in-alt"> Login</i></button>
-    				<div class="col-12 forgot">
-    					<a href="Cursos.php">Criar nova conta</a><br>
-    					<a href="#">Esqueceu sua senha?</a>
+    				<button type="submit" class="btn col-xl-3 float-left text-light"><i class="fas fa-sign-in-alt"> Login</i></button>
+    				<div class="col-sm-12 forgot text-dark">
+    					<!-- <a href="#">Criar nova conta</a><br>
+    					<a href="#">Esqueceu sua senha?</a> -->
     				</div>
     			</form>
                 <?php 
@@ -47,7 +47,6 @@
     		</div>    		
     	</div>
     </div>
-
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
