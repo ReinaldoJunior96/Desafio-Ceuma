@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
-  <body>
+  <body onload="window.print()">
     <nav class="navbar navbar-expand-lg navbar-light ">
       <div class="container">
         <a class="navbar-brand text-dark font-weight-bold" href="Menu.php" >
@@ -58,30 +58,8 @@
           </button>
         </div>
     </div> -->
+    <h3>Cursos Universidade CEUMA</h3>
     <div class="container bg-form rounded-bottom" >
-      <h2 class="titulocrud text-dark "><i class="fas fa-book mr-2" style="font-size: 1em;"></i>Cadastro Cursos </h2>
-        <form action="cURL/cURLCurso/POST_Curso.php" method="POST">
-          <input type="hidden" name="modulo" value="curso" class="form-control" id="inputEmail4">
-          <input type="hidden" name="usuario" value="<?= $_SESSION['usuario']?>" class="form-control" id="inputEmail4">
-          <div class="form-row">
-            <div class="form-group formcrud col-md-12">
-              <label for="inputEmail4">Nome</label>
-              <input type="text" name="nome_curso" class="form-control" id="inputEmail4" required="">
-            </div>
-          </div>
-          <div class="form-row">
-              <div class="form-group formcrud col-sm-6">
-                <label for="inputAddress2">Data Cadastro</label>
-                <input type="date" name="data_cadastro" class="form-control" id="inputAddress2" required="">
-              </div>
-              <div class="form-group formcrud col-sm-6">
-                <label for="inputAddress">Carga Horária</label>
-                <input type="text" name="carga_horaria" class="form-control" id="inputAddress" required="">
-              </div>
-          </div>
-          <button type="submit" class="btn text-light col-sm-2">Adicionar</button>
-        </form>
-
       <table class="table table-sm" >
       <thead class="tablehead ">
         <tr>
@@ -93,11 +71,7 @@
         </tr>
       </thead>
       <tbody>
-        <!-- <a href="Gerar_Excel/Cursos_excel.php"><button type="button" class="btn text-light float-right col-xl-2">Gerar Excel</button></a> -->
-        <i class="fas fa-cog float-right my-2" data-toggle="dropdown"></i>       
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="Gerar_Excel/Cursos_excel.php">Gerar Excel</a>
-            <a class="dropdown-item" href="Impressao.php">Imprimir</a>
+        
         <?php 
             foreach ($cursos as $curso) {
                 echo "
@@ -105,8 +79,6 @@
                       <td><a href='AlunosPorCurso.php?curso=".$curso->id."'>".$curso->nome_curso."</a></td>
                       <td>".date('d/m/Y', strtotime($curso->data_cadastro))."</td>
                       <td>".$curso->carga_horaria."</td>
-                      <td><a href='Edit_Curso.php?id=".$curso->id."'><i class='fas fa-user-edit'></i></a></td>
-                      <td><a href='cURL/cURLCurso/DELETE_Curso.php?id=".$curso->id."'><i class='fas fa-trash-alt'></i></a></td>
                     </tr>
                 ";
             }

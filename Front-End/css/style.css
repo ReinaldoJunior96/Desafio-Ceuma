@@ -114,3 +114,9 @@ i.fa-cog{
 .bg-form{
 	background-color: #fff; 
 }
+
+@media print{
+	a{
+		text-decoration: none;
+	}
+}
