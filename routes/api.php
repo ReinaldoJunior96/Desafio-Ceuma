@@ -14,6 +14,7 @@ use Illuminate\Http\Request;
 */
 Route::post('/curso/alunos/{parameter}','CursoController@AlunosPorCurso');
 Route::get('/alunos/cursos','AlunoController@alunosjoincursos');
+Route::get('/alunos/contar','AlunoController@contar');
 //Route::post('/login/{user}/{senha}','UsuarioController@login');
 Route::resource('curso', 'CursoController');
 Route::resource('aluno', 'AlunoController');

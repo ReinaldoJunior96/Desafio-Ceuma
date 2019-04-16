@@ -9,31 +9,36 @@ use App\Aluno;
 
 class AlunoController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         $all_alunos = DB::table('aluno')->select()->get();
         return $all_alunos;
     }
-    public function show($parameter){
-        $aluno = DB::table('aluno')->select()->where('id','=',$parameter)->get();
+
+    public function show($parameter)
+    {
+        $aluno = DB::table('aluno')->select()->where('id', '=', $parameter)->get();
         return $aluno;
     }
-    public function store(Request $request){
+
+    public function store(Request $request)
+    {
         try {
             $verifica_permissao = DB::table('usuario')
-            ->select()
-            ->where('usuario','=',$request->usuario)
-            ->where('modulo','=',$request->modulo)
-            ->where('operacao','LIKE','%I%')
-            ->count();
+                ->select()
+                ->where('usuario', '=', $request->usuario)
+                ->where('modulo', '=', $request->modulo)
+                ->where('operacao', 'LIKE', '%I%')
+                ->count();
             if ($verifica_permissao == 1) {
                 $query = DB::table('aluno')->insert([
                     'nome_aluno' => $request->nome_aluno,
                     'CPF' => $request->CPF,
-                    'endereco' =>$request->endereco,
-                    'CEP'=>$request->CEP,
-                    'email'=>$request->email,
-                    'telefone'=>$request->telefone,
-                    'curso_id'=>$request->curso_id
+                    'endereco' => $request->endereco,
+                    'CEP' => $request->CEP,
+                    'email' => $request->email,
+                    'telefone' => $request->telefone,
+                    'curso_id' => $request->curso_id
                 ]);
                 $querylogtext = "DB::table('aluno')->insert([
                     'nome_aluno' => $request->nome_aluno,
@@ -46,37 +51,38 @@ class AlunoController extends Controller
                 ])";
                 $querylog = DB::table('alunolog')->insert([
                     'usuario_logado' => $request->usuario,
-                    'operacao_realizada'=> $querylogtext,
+                    'operacao_realizada' => $querylogtext,
                     'operacao' => 'I'
                 ]);
                 return $verifica_permissao;
             }
         } catch (QueryException $e) {
-            return response()->json(['Status'=>'Erro',404]);
+            return response()->json(['Status' => 'Erro', 404]);
         }
     }
 
-    public function update(Request $request, $parameter ){
+    public function update(Request $request, $parameter)
+    {
         try {
-        $verifica_permissao = DB::table('usuario')
-        ->select()
-        ->where('usuario','=',$request->usuario)
-        ->where('modulo','=',$request->modulo)
-        ->where('operacao','LIKE','%A%')
-        ->count();
-        if ($verifica_permissao == 1) {
-            $query = DB::table('aluno')
-                ->where('id', '=',$parameter)
-                ->update([
-                    'nome_aluno' => $request->nome_aluno,
-                    'CPF' => $request->CPF,
-                    'endereco' =>$request->endereco,
-                    'CEP'=>$request->CEP,
-                    'email'=>$request->email,
-                    'telefone'=>$request->telefone,
-                    'curso_id'=>$request->curso_id
-                ]);
-            $querylogtext = "DB::table('aluno')
+            $verifica_permissao = DB::table('usuario')
+                ->select()
+                ->where('usuario', '=', $request->usuario)
+                ->where('modulo', '=', $request->modulo)
+                ->where('operacao', 'LIKE', '%A%')
+                ->count();
+            if ($verifica_permissao == 1) {
+                $query = DB::table('aluno')
+                    ->where('id', '=', $parameter)
+                    ->update([
+                        'nome_aluno' => $request->nome_aluno,
+                        'CPF' => $request->CPF,
+                        'endereco' => $request->endereco,
+                        'CEP' => $request->CEP,
+                        'email' => $request->email,
+                        'telefone' => $request->telefone,
+                        'curso_id' => $request->curso_id
+                    ]);
+                $querylogtext = "DB::table('aluno')
                 ->where('id', '=',$parameter)
                 ->update([
                     'nome_aluno' => $request->nome_aluno,
@@ -87,49 +93,58 @@ class AlunoController extends Controller
                     'telefone'=>$request->telefone,
                     'curso_id'=>$request->curso_id
                 ]);";
-            $querylog = DB::table('alunolog')->insert([
+                $querylog = DB::table('alunolog')->insert([
                     'usuario_logado' => $request->usuario,
-                    'operacao_realizada'=> $querylogtext,
+                    'operacao_realizada' => $querylogtext,
                     'operacao' => 'A'
                 ]);
-            return $verifica_permissao;
-        }
+                return $verifica_permissao;
+            }
         } catch (QueryException $e) {
-            return response()->json(['status'=>'Erro ao tentar executar query']);
-        }
-    }
-    public function destroy(Request $request , $parameter){
-        try{
-        $verifica_permissao = DB::table('usuario')
-        ->select()
-        ->where('usuario','=',$request->usuario)
-        ->where('modulo','=',$request->modulo)
-        ->where('operacao','LIKE','%E%')
-        ->count();
-        if ($verifica_permissao == 1) {
-            $query = DB::table('aluno')->where('id', '=', $parameter)->delete();
-            $querylogtext = "DB::table('aluno')->where('id', '=', $parameter)->delete();";
-            $querylog = DB::table('alunolog')->insert([
-                    'usuario_logado' => $request->usuario,
-                    'operacao_realizada'=> $querylogtext,
-                    'operacao' => 'E'
-            ]);
-            return $verifica_permissao;
-        }
-        } catch (QueryException $e) {
-            return response()->json(['status'=>'Erro ao tentar executar query']);
+            return response()->json(['status' => 'Erro ao tentar executar query']);
         }
     }
 
-    public function alunosjoincursos(){
-        try{
-        $query = DB::table('aluno')
-            ->join('curso', 'aluno.curso_id', '=', 'curso.id')
-            ->select()
-            ->get();          
-        return $query;
+    public function destroy(Request $request, $parameter)
+    {
+        try {
+            $verifica_permissao = DB::table('usuario')
+                ->select()
+                ->where('usuario', '=', $request->usuario)
+                ->where('modulo', '=', $request->modulo)
+                ->where('operacao', 'LIKE', '%E%')
+                ->count();
+            if ($verifica_permissao == 1) {
+                $query = DB::table('aluno')->where('id', '=', $parameter)->delete();
+                $querylogtext = "DB::table('aluno')->where('id', '=', $parameter)->delete();";
+                $querylog = DB::table('alunolog')->insert([
+                    'usuario_logado' => $request->usuario,
+                    'operacao_realizada' => $querylogtext,
+                    'operacao' => 'E'
+                ]);
+                return $verifica_permissao;
+            }
         } catch (QueryException $e) {
-            return response()->json(['status'=>'Erro ao tentar executar query']);
+            return response()->json(['status' => 'Erro ao tentar executar query']);
         }
+    }
+
+    public function alunosjoincursos()
+    {
+        try {
+            $query = DB::table('aluno')
+                ->join('curso', 'aluno.curso_id', '=', 'curso.id')
+                ->select()
+                ->get();
+            return $query;
+        } catch (QueryException $e) {
+            return response()->json(['status' => 'Erro ao tentar executar query']);
+        }
+    }
+
+    public function contar()
+    {
+        $contar = DB::table('aluno')->select()->count();
+        return $contar;
     }
 }

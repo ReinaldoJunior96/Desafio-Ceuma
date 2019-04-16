@@ -1,122 +1,144 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
-body{
-	background: linear-gradient(to right, #141E30,#243B55);
-	background-size: cover;
-}
-.main-section{ 
-	margin: 0 auto;
-	margin-top: 150px;
-	padding: 0;
-}
-.modal-content{
-	background: linear-gradient(to left, #C9D6FF,#E2E2E2);
-	opacity: .95;
-	padding: 0 18px;
-	/*box-shadow: 0px 0px 3px #848484; */
-}
-.user-img{
-	margin-top: -50px;
-	margin-bottom: 35px;
-}
-.user-img img{
-	height: 120px;
-	width: 130px;
-	border-radius: 5px;
-	box-shadow: 0px 0px 2px #848484; 
-}
-.form-group{
-	margin-bottom: 25px;
-	text-align: left;
-}
-.form-group input{
-	height: 42px;
-	border-radius: 5px;
-	border: 0;
-	font-size: 18px;
-}
-.form-group.formcrud input{
-	/*background-color: red;*/
-	border-radius: 5px;
-	box-shadow: 0px 0px 3px #848484; 
-}
-.form-group.formcrud label{
-	color: black;
-}
-label{
-	color: #fff;
-	font-family: 'Roboto Slab', serif;
-}
-button{
-	width: 100%;
-	margin: 5px, 0 25px;
-}
-.btn{
-	background-color: #243B55;
-	font-size: 19px;
-	padding: 7px 14px;
-	border-radius: 5px;
-	border-bottom: 4px solid #141E30;
-}
-.btn:hover, .btn:focus{
-	background-color: #2193b0!important;
-	border-bottom: 4px solid #2193b0!important;
-}
-.forgot{
-	padding: 10px;
-	float: left;
+
+body {
+    background: linear-gradient(to right, #141E30, #243B55);
+    background-size: cover;
 }
 
-.tablehead{
-	background-color: #243B55;
-	color: #fff;
-}
-.navbar{
-	background-color: #fff;
-	color: #fff;
+.main-section {
+    margin: 0 auto;
+    margin-top: 150px;
+    padding: 0;
 }
 
-.titulocrud{
-	font-family: 'Roboto Slab', serif;
-}
-.img-icon{
-	border-radius: 5px;
-}
-.logout{
-	font-size: 20px;
-}
-.topolist{
-	background-color: red;
-}
-.topo{
-	background-color: #3b4652;
-	box-shadow: 0px 0px 3px #848484; 
-	border: 80px;
-}
-i.fa-book{
-	font-size: 3em;
-	color: #243B55;
-}
-i.fa-users{
-	font-size: 3em;
-	color: #243B55;
-}
-i.fa-cog{
-	font-size: 1.5em;
-	color: #243B55;
+.modal-content {
+    background: linear-gradient(to left, #C9D6FF, #E2E2E2);
+    opacity: .95;
+    padding: 0 18px;
+    /*box-shadow: 0px 0px 3px #848484; */
 }
 
-.menu-lateral{
-	background-color: red;
-	height: 500px;
+.user-img {
+    margin-top: -50px;
+    margin-bottom: 35px;
 }
 
-.bg-form{
-	background-color: #fff; 
+.user-img img {
+    height: 120px;
+    width: 130px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px #848484;
 }
 
-@media print{
-	a{
-		text-decoration: none;
-	}
+.form-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.form-group input {
+    height: 42px;
+    border-radius: 5px;
+    border: 0;
+    font-size: 18px;
+}
+
+.form-group.formcrud input {
+    /*background-color: red;*/
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px #848484;
+}
+
+.form-group.formcrud label {
+    color: black;
+}
+
+label {
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+}
+
+button {
+    width: 100%;
+    margin: 5px, 0 25px;
+}
+
+.btn {
+    background-color: #243B55;
+    font-size: 19px;
+    padding: 7px 14px;
+    border-radius: 5px;
+    border-bottom: 4px solid #141E30;
+}
+
+.btn:hover, .btn:focus {
+    background-color: #2193b0 !important;
+    border-bottom: 4px solid #2193b0 !important;
+}
+
+.forgot {
+    padding: 10px;
+    float: left;
+}
+
+.tablehead {
+    background-color: #243B55;
+    color: #fff;
+}
+
+.navbar {
+    background-color: #fff;
+    color: #fff;
+}
+
+.titulocrud {
+    font-family: 'Roboto Slab', serif;
+}
+
+.img-icon {
+    border-radius: 5px;
+}
+
+.logout {
+    font-size: 20px;
+}
+
+.topolist {
+    background-color: red;
+}
+
+.topo {
+    background-color: #3b4652;
+    box-shadow: 0px 0px 3px #848484;
+    border: 80px;
+}
+
+i.fa-book {
+    font-size: 3em;
+    color: #243B55;
+}
+
+i.fa-users {
+    font-size: 3em;
+    color: #243B55;
+}
+
+i.fa-cog {
+    font-size: 1.5em;
+    color: #243B55;
+}
+
+.menu-lateral {
+    background-color: red;
+    height: 500px;
+}
+
+.bg-form {
+    background-color: #fff;
+}
+
+@media print {
+    a {
+        text-decoration: none;
+    }
 }

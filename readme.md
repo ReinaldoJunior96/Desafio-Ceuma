@@ -13,10 +13,11 @@ A Universidade CEUMA contratou uma empresa terceirizada para criar um sistema de
 - RF Alterar Curso
 - RF Listar Curso
 - RF Listar os alunos que fazem parte de um curso
+- RF O sistema deve exportar a lista de curso e alunos para o excel
+- RF O sistema deve imprimir os dados dos cursos
 
 - RNF O sistema deve utilizar a tecnologia REST para fazer o processamento de dados
 - RNF Autenticação de usuário para consumo de webservices do sistema por sistemas externos
-- RNF Interação com o webservice para transferência de dados
 - RNF Uso de Design responsivo nas interfaces gráficas
 
 
@@ -30,4 +31,4 @@ A Universidade CEUMA contratou uma empresa terceirizada para criar um sistema de
 
 ## Para Utilização
 
-- Para utilização da aplicação é necessário a instalação do Composer, Laravel e configuração de uma base de dados MySQL. Configurações relacionadas ao banco de dados podem ser encontradas no aquivo .env e podem ser alteradas de acordo com a necessidade do usuário.
+- Para utilização da aplicação é necessário a instalação do Composer para instalação de componentes, após a clonagem do repositório, execute o comendo "composer install" dentro da pasta do repositório, renomeie o arquivo ".env.exemple" para apenas ".env" e execute o comando "php artisan key:generate" para seu laravel funcionar perfeitamente. Configurações relacionadas ao banco de dados podem ser encontradas no aquivo .env e podem ser alteradas de acordo com a necessidade do usuário.

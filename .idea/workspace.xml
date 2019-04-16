@@ -3,8 +3,31 @@
   <component name="ChangeListManager">
     <list default="true" id="44fd587b-4925-4fde-8397-8672b4114a17" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/Alunos.php" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/Alunos.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Front-End/AlunosPorCurso.php" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/AlunosPorCurso.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/ClassesDAO/UsuarioDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/ClassesDAO/UsuarioDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/ClassesDAO/conexao.php" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/ClassesDAO/conexao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/Cursos.php" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/Cursos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/Destruir.php" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/Destruir.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/Edit_Aluno.php" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/Edit_Aluno.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/Edit_Curso.php" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/Edit_Curso.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/Gerar_Excel/Alunos_excel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/Gerar_Excel/Alunos_excel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/Gerar_Excel/Cursos_excel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/Gerar_Excel/Cursos_excel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/Impressao.php" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/Impressao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/Menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/cURL/cURLAluno/DELETE_Aluno.php" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/cURL/cURLAluno/DELETE_Aluno.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/cURL/cURLAluno/POST_Aluno.php" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/cURL/cURLAluno/POST_Aluno.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/cURL/cURLAluno/PUT_Aluno.php" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/cURL/cURLAluno/PUT_Aluno.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/cURL/cURLCurso/DELETE_Curso.php" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/cURL/cURLCurso/DELETE_Curso.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/cURL/cURLCurso/POST_Curso.php" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/cURL/cURLCurso/POST_Curso.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/cURL/cURLCurso/PUT_Curso.php" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/cURL/cURLCurso/PUT_Curso.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Aluno.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Aluno.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Curso.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Curso.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AlunoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AlunoController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CursoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CursoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Usuario.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,47 +40,7 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Front-End/AlunosPorCurso.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="80" lean-forward="true" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="80" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Front-End/Cursos.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="67" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CursoController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-102">
-              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-              <folding>
-                <element signature="e#40#68#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -78,19 +61,35 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_04_11_004030_criar_tabela_alunolog.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_11_004048_criar_tabela_cursolog.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_11_003028_criar_tabela_curso.php" />
-        <option value="$PROJECT_DIR$/app/Curso.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AlunoController.php" />
-        <option value="$PROJECT_DIR$/app/Aluno.php" />
         <option value="$PROJECT_DIR$/Front-End/index.php.html" />
-        <option value="$PROJECT_DIR$/Front-End/index.php" />
         <option value="$PROJECT_DIR$/Front-End/Put_Curso.php" />
         <option value="$PROJECT_DIR$/Front-End/PUT_Curso.php" />
-        <option value="$PROJECT_DIR$/Front-End/Edit_Curso.php" />
         <option value="$PROJECT_DIR$/Front-End/cURL/PUT_Cursos.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/CursoController.php" />
         <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/Front-End/Alunos.php" />
+        <option value="$PROJECT_DIR$/Front-End/Menu.php" />
+        <option value="$PROJECT_DIR$/Front-End/index.php" />
+        <option value="$PROJECT_DIR$/Front-End/Impressao.php" />
+        <option value="$PROJECT_DIR$/Front-End/Edit_Curso.php" />
+        <option value="$PROJECT_DIR$/Front-End/Edit_Aluno.php" />
+        <option value="$PROJECT_DIR$/Front-End/Destruir.php" />
         <option value="$PROJECT_DIR$/Front-End/Cursos.php" />
         <option value="$PROJECT_DIR$/Front-End/AlunosPorCurso.php" />
+        <option value="$PROJECT_DIR$/Front-End/Gerar_Excel/Alunos_excel.php" />
+        <option value="$PROJECT_DIR$/Front-End/Gerar_Excel/Cursos_excel.php" />
+        <option value="$PROJECT_DIR$/Front-End/cURL/cURLAluno/DELETE_Aluno.php" />
+        <option value="$PROJECT_DIR$/Front-End/cURL/cURLAluno/POST_Aluno.php" />
+        <option value="$PROJECT_DIR$/Front-End/cURL/cURLAluno/PUT_Aluno.php" />
+        <option value="$PROJECT_DIR$/Front-End/cURL/cURLCurso/DELETE_Curso.php" />
+        <option value="$PROJECT_DIR$/Front-End/cURL/cURLCurso/POST_Curso.php" />
+        <option value="$PROJECT_DIR$/Front-End/css/style.css" />
+        <option value="$PROJECT_DIR$/Front-End/ClassesDAO/conexao.php" />
+        <option value="$PROJECT_DIR$/Front-End/ClassesDAO/UsuarioDAO.php" />
+        <option value="$PROJECT_DIR$/app/Usuario.php" />
+        <option value="$PROJECT_DIR$/app/Curso.php" />
+        <option value="$PROJECT_DIR$/app/Aluno.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/CursoController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AlunoController.php" />
       </list>
     </option>
   </component>
@@ -176,7 +175,7 @@
       <path value="$PROJECT_DIR$/vendor/laracasts/flash" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="260" />
     <option name="y" value="20" />
     <option name="width" value="1400" />
@@ -212,11 +211,6 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
               <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Desafio-Ceuma" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Desafio-Ceuma" type="462c0819:PsiDirectoryNode" />
-              <item name="Front-End" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Desafio-Ceuma" type="b2602c69:ProjectViewProjectNode" />
@@ -268,16 +262,18 @@
       <workItem from="1554941692741" duration="11380000" />
       <workItem from="1555018932538" duration="2036000" />
       <workItem from="1555094649929" duration="2518000" />
+      <workItem from="1555370083894" duration="380000" />
+      <workItem from="1555420039777" duration="235000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15934000" />
+    <option name="totallyTimeSpent" value="16549000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18710022" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -347,10 +343,112 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Aluno.php">
+    <entry file="file://$PROJECT_DIR$/Front-End/index.php.html" />
+    <entry file="file://$PROJECT_DIR$/Front-End/images/fundobody.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/cURL/POST_Cursos.php" />
+    <entry file="file://$PROJECT_DIR$/Front-End/cURL/PUT_Cursos.php" />
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+        <state relative-caret-position="272">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/Menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1916" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/Impressao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1020" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/Edit_Curso.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="64" column="26" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/Edit_Aluno.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/Destruir.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/Cursos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-697">
+          <caret line="10" column="63" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/AlunosPorCurso.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/Alunos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="59" column="45" selection-start-line="59" selection-start-column="45" selection-end-line="59" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/Gerar_Excel/Alunos_excel.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/Gerar_Excel/Cursos_excel.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/cURL/cURLAluno/DELETE_Aluno.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/cURL/cURLAluno/POST_Aluno.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/cURL/cURLAluno/PUT_Aluno.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/cURL/cURLCurso/POST_Curso.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/cURL/cURLCurso/DELETE_Curso.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/css/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/ClassesDAO/conexao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/ClassesDAO/UsuarioDAO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Usuario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -361,76 +459,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Front-End/index.php.html" />
-    <entry file="file://$PROJECT_DIR$/Front-End/index.php">
+    <entry file="file://$PROJECT_DIR$/app/Aluno.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Front-End/images/fundobody.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Front-End/cURL/POST_Cursos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="17" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Front-End/cURL/PUT_Cursos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Front-End/Edit_Curso.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Front-End/Cursos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="67" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Front-End/AlunosPorCurso.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="80" lean-forward="true" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AlunoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-267">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="102">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CursoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
+        <state relative-caret-position="153">
           <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AlunoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
         </state>
       </provider>
     </entry>
