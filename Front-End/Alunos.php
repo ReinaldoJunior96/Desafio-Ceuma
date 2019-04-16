@@ -29,7 +29,6 @@
    <nav class="navbar navbar-expand-lg navbar-light ">
       <div class="container">
         <a class="navbar-brand text-dark font-weight-bold" href="Menu.php" >
-          <!-- <img src="images/perfil.png" width="30" height="30" class="d-inline-block align-top img-icon" alt=""> -->
           Desafio Ceuma
         </a>
         <button class="navbar-toggler corbotao" type="button" data-toggle="collapse" data-target="#textoNavbar" aria-controls="textoNavbar" aria-expanded="false" aria-label="Alterna navegação">
