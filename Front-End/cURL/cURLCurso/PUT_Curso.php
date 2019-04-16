@@ -21,12 +21,13 @@ curl_setopt($ch, CURLOPT_POST,           true);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST,  'PUT');
 
 $resposta = curl_exec($ch);
+echo $resposta;
 curl_close($ch);
-header("Refresh: 1;url=../../Cursos.php");
+//header("Refresh: 1;url=../../Cursos.php");
 
 
 ?>
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <title>Desafio Grupo Ceuma</title>
@@ -89,3 +90,4 @@ header("Refresh: 1;url=../../Cursos.php");
   </body>
   
 </html>
+ -->

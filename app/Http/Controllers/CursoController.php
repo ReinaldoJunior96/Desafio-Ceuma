@@ -62,28 +62,29 @@ class CursoController extends Controller
             ->where('modulo','=',$request->modulo)
             ->where('operacao','LIKE','%A%')
             ->count();
-            if ($verifica_permissao == 1) {
-                $query = DB::table('curso')
-                    ->where('id', '=',$parameter)
-                    ->update([
-                        'nome_curso' => $request->nome_curso,
-                        'data_cadastro' =>$request->data_cadastro,
-                        'carga_horaria' => $request->carga_horaria
-                    ]);
-                $querylogtext = "DB::table('curso')
-                    ->where('id', '=',$parameter)
-                    ->update([
-                        'nome_curso' => $request->nome_curso,
-                        'data_cadastro' =>$request->data_cadastro,
-                        'carga_horaria' => $request->carga_horaria
-                    ]);";
-                $querylog = DB::table('cursolog')->insert([
-                        'usuario_logado' => $request->usuario,
-                        'operacao_realizada'=> $querylogtext,
-                        'operacao'=> 'A'
-                ]);
-                return response()->json(['Status'=>'Error'],404);
-            }
+            return $verifica_permissao;
+            // if ($verifica_permissao == 1) {
+            //     $query = DB::table('curso')
+            //         ->where('id', '=',$parameter)
+            //         ->update([
+            //             'nome_curso' => $request->nome_curso,
+            //             'data_cadastro' =>$request->data_cadastro,
+            //             'carga_horaria' => $request->carga_horaria
+            //         ]);
+            //     $querylogtext = "DB::table('curso')
+            //         ->where('id', '=',$parameter)
+            //         ->update([
+            //             'nome_curso' => $request->nome_curso,
+            //             'data_cadastro' =>$request->data_cadastro,
+            //             'carga_horaria' => $request->carga_horaria
+            //         ]);";
+            //     $querylog = DB::table('cursolog')->insert([
+            //             'usuario_logado' => $request->usuario,
+            //             'operacao_realizada'=> $querylogtext,
+            //             'operacao'=> 'A'
+            //     ]);
+            //     return response()->json(['Status'=>'Error'],404);
+            // }
         } catch (QueryException $e) {
             return response()->json(['status'=>'Erro']);
         }
