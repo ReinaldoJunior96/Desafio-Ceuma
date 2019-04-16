@@ -58,15 +58,6 @@ $cursos = json_decode($url_curso);
 // Calcular % total alunos
 $meta = 7;
 $porc = $alunos / $meta * 100;
-// Calcular % alunos medicina
-$meta = 3;
-$porcM = $alunos / $meta * 100;
-// Calcular % alunos adminstração
-$meta = 2;
-$porcA = $alunos / $meta * 100;
-// Calcular % alunos direito
-$meta = 2;
-$porcD = $alunos / $meta * 100;
 ?>
 
 
